@@ -7,8 +7,6 @@ RUN apt-get install -y gdb # alire GDB was not built with support for the DAP
                            # (Debug Adapter Protocol) interpreter
 RUN apt-get install -y python3 python3-pip # Testsuite
 
-RUN /usr/bin/pip3 install e3-testsuite
-
 USER dev
 
 ### Alire
