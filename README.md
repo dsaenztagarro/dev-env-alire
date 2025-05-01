@@ -3,7 +3,7 @@
 ### Running tests
 
 ```bash
-alr printenv | grep GNAT_NATIVE_ALIRE_PREFIX|GPRBUILD_ALIRE_PREFIX
+alr printenv | grep "GNAT_NATIVE_ALIRE_PREFIX\|GPRBUILD_ALIRE_PREFIX"
 export PATH="<gnat_native_dir>/bin:<gprbuild_dir>/bin:$PATH"
 
 # Use Built-in venv (Python 3.3+)

@@ -1,10 +1,11 @@
 DOCKER_USER ?= "dsaenztagarro"
 IMAGE = "$(DOCKER_USER)/dev-env-alire" # docker image
-CONTAINER = "devenv-alire" # docker container
+CONTAINER = "dev-env-alire" # docker container
 
 ALIRE_FOLDER = "./third_party/alr-nightly-bin-aarch64-linux"
 LSP_EXE = "./third_party/ada_language_server"
 ALIRE_DIR := "$(HOME)/Code/alire"
+CURRENT_DIR := $(shell pwd)
 
 .PHONY: third_party image container pause unpause terminal clean help
 
