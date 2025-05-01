@@ -26,7 +26,7 @@ image: third_party
 # -q , quiet
 
 container: image
-	@echo "  Starting container $(CONTAINER)..."
+	@echo "  Starting detached container $(CONTAINER)..."
 	@docker run --detach --name $(CONTAINER) --rm -v "$(ALIRE_DIR):/home/dev/workdir" -it $(IMAGE)
 # ^
 # --rm ,    Automatically remove the container and its associated anonymous volumes when it exits
@@ -37,7 +37,7 @@ container: image
 
 start:
 	@echo "  Starting detached container $(CONTAINER)..."
-	@docker run --detach --name $(CONTAINER) --rm -v "$(CURRENT_DIR):/home/dev/workdir" -it $(IMAGE)
+	@docker run --detach --name $(CONTAINER) --rm -v "$(ALIRE_DIR):/home/dev/workdir" -it $(IMAGE)
 
 stop:
 	@echo "  Stopping container $(CONTAINER)..."
